@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     --green: #689022;
     --blue: #002f64;
     --white: #fff;
+    --black: #242624;
     --fontHeader: 'Lora', serif;
     --fontText: 'Sora', sans-serif;
 }
@@ -38,6 +39,9 @@ a{
 }
 
 body{
+    background: var(--white);
+    margin: 0;
+
     h1, h2, h3, h4, h5{
     font-family: var(--fontHeader);
     text-transform: capitalize;
@@ -59,6 +63,19 @@ body{
     p, span, a, ul, li{
         font-family: var(--fontText);
         font-size: 1rem;
+    }
+
+    @media screen and (min-width: 720px){
+    }
+
+    .hover{
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .hover:hover{
+        color: var(--white) !important;
+        transition: all 0.3s ease-in-out;
     }
 
 }
